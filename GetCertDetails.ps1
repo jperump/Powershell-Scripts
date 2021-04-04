@@ -29,7 +29,8 @@ Foreach ($server in $server) {
         $certificate = foreach ($certificate in $Cert) {
             $name = $certificate. FriendlyName
     
-            $SHA = $certificate.SignatureAlgorithm.FriendlyName if ($certificate. FriendlyName -ne "") { 
+            $SHA = $certificate.SignatureAlgorithm.FriendlyName 
+            if ($certificate. FriendlyName -ne "") { 
                 Write-Host $env:COMPUTERNAME $SHA $name
             } 
         } 
